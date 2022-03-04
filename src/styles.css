@@ -1,0 +1,181 @@
+/* general */
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: all .2s ease;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* App component */
+
+.App {
+    background-image: url(./images/background.jpg);
+    height: 100vh;
+    width: 100%;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(22, 21, 21);
+    opacity: .9;
+    position: absolute;
+    top: 0;
+    overflow-y: scroll;
+}
+
+
+/* Tasks container */
+
+.tasks-container {
+    padding: 10px 0;
+    width: 340px;
+    height: 90vh;
+    overflow-y: scroll;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    margin: 10px 0;
+    background-color: rgb(7, 7, 7);
+    scrollbar-width: 1px;
+    min-height: 400px;
+}
+
+
+/* button component */
+
+.button {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    color: #fff;
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 15px 0;
+}
+
+
+/* Note component */
+
+.Note {
+    width: 280px;
+    height:auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-x: hidden;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 4px 4px 8px black;
+    font-size: 15px;
+    font-weight: lighter;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+.color-theme-line {
+    height: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+}
+
+.content {
+    color: lightgray;
+    margin-top: 45px;
+    margin-left: 10px;
+}
+
+.date {
+    color: #fff;
+    font-weight: lighter;
+    position: relative;
+    left: 75%;
+    font-size: 10px;
+}
+
+.Note .icons {
+    width:265px ;
+}
+
+/* AddNote component */
+
+.add-note {
+    position: fixed ;
+    z-index: 20;
+    overflow: hidden;
+    width: 340px;
+}
+
+.text-input {
+    background-color: black;
+    width: 340px;
+    height: 300px;
+    border: none;
+    padding: 40px;
+    font-size: 16px;
+    font-weight: lighter;
+    resize: none;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.text-input:focus {
+    outline: none;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 300px;
+    padding: 0 10px;
+    z-index: 30;
+    margin-top: 10px;
+}
+
+.color-theme {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 320px;
+    height: 60px;
+}
+
+
+/* Icon component */
+
+.icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    pointer-events: fill;
+    box-sizing: border-box;
+}
+
+.add-note .icon:hover,
+.Note .icon:hover {
+    box-shadow: 2px 2px 4px #fff;
+}
