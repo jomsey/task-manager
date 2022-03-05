@@ -28,7 +28,7 @@ export default class Tasks
 /********************************************************************************************/
  this.handleCreateNote()  //open Note for editting
 
- fetch(`https://jose-taskmanager-api.herokuapp.com/api/notes/${note.id}`, {
+ fetch(`/api/notes/${note.id}`, {
       method: "PUT",
       headers: {
           'Content-Type': 'application/json'
@@ -67,7 +67,8 @@ export default class Tasks
     fetch('https://jose-taskmanager-api.herokuapp.com/api/notes', {
       method: "POST",
       headers: {
-          'Content-Type': 'application/json'
+           'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
       body: JSON.stringify(data)
 
@@ -82,7 +83,12 @@ export default class Tasks
   }
 
   getNotesData= async () => {
-       const response = await fetch('/api/notes')
+      const response = await fetch('https://jose-taskmanager-api.herokuapp.com/api/notes', {
+      method: "GET",
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      }})
        const notes= await response.json()
        return this.setState({notes})
   }

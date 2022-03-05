@@ -26,9 +26,10 @@
     height: 100%;
     background-color: rgb(22, 21, 21);
     opacity: .9;
-    position: absolute;
+    position: fixed;
     top: 0;
-    overflow-y: scroll;
+    bottom:-10px;
+    overflow-y: ;
 }
 
 
@@ -156,7 +157,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 320px;
+    left: 300px;
     height: 60px;
 }
 
