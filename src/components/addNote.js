@@ -16,7 +16,7 @@ const AddNote=({handleClose,
                 </div>
                 <form onSubmit={handleDone}>
                 <input className='color-theme' type="color" value={theme} onChange={handleChange} name="color-theme"/>
-                 <textarea className='text-input' name="content" value={content} onChange={handleChange}></textarea>
+                 <textarea className='text-input' name="content" value={content} onChange={handleChange}>Enter text here ...</textarea>
                 </form>
             </div>
         );

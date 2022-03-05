@@ -28,9 +28,10 @@ const Note = ({themeColor,
                      onIconClick={onNoteDelete}
                    />
 
-                  <Icon
+                  {/*<Icon
                       iconImage='edit'
-                      onIconClick={onNoteEdit}/>
+                      onIconClick={onNoteEdit}
+                  />*/}
             </div>
             <small className='date'>{dateCreated}</small>
             <p className='content'>{content}</p>

@@ -28,7 +28,7 @@ export default class Tasks
 /********************************************************************************************/
  this.handleCreateNote()  //open Note for editting
 
- const response = fetch(`/api/notes/${note.id}`, {
+ fetch(`/api/notes/${note.id}`, {
       method: "PUT",
       headers: {
           'Content-Type': 'application/json'
