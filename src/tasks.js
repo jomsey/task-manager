@@ -28,7 +28,7 @@ export default class Tasks
 /********************************************************************************************/
  this.handleCreateNote()  //open Note for editting
 
- fetch(`/api/notes/${note.id}`, {
+ fetch(`https://jose-taskmanager-api.herokuapp.com/api/notes/${note.id}`, {
       method: "PUT",
       headers: {
           'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ export default class Tasks
   }
 
    handleNoteDelete=async (note)=>{
-    await fetch(`/api/notes/delete/${note.id}`, {
+    await fetch(`https://jose-taskmanager-api.herokuapp.com/api/notes/delete/${note.id}`, {
       method: "DELETE",
       headers: {
           'Content-Type': 'application/json'
@@ -64,7 +64,7 @@ export default class Tasks
   handleNoteSubmit=e=>{
   // Add note to the database
     const data = {content:this.state.noteContent,theme_color:this.state.theme}
-    fetch('/api/notes', {
+    fetch('https://jose-taskmanager-api.herokuapp.com/api/notes', {
       method: "POST",
       headers: {
           'Content-Type': 'application/json'
@@ -87,7 +87,7 @@ export default class Tasks
        return this.setState({notes})
   }
    
-  componentDidMount= async () =>{
+  componentDidMount=  () =>{
         this.getNotesData()
   }
 
